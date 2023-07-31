@@ -1,0 +1,76 @@
+{
+  "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+    {
+      "device1": "h1",
+      "device2": "s20",
+      "port1": 1,
+      "port2": 1
+    },
+    {
+      "device1": "h2",
+      "device2": "s21",
+      "port1": 1,
+      "port2": 1
+    },
+    {
+      "device1": "h3",
+      "device2": "s22",
+      "port1": 1,
+      "port2": 1
+    },
+    {
+      "device1": "h4",
+      "device2": "s23",
+      "port1": 1,
+      "port2": 1
+    },
+    {
+      "device1": "s20",
+      "device2": "s21",
+      "port1": 2,
+      "port2": 2
+    },
+    {
+      "device1": "s20",
+      "device2": "s22",
+      "port1": 3,
+      "port2": 2
+    },
+    {
+      "device1": "s21",
+      "device2": "s22",
+      "port1": 3,
+      "port2": 3
+    },
+    {
+      "device1": "s21",
+      "device2": "s23",
+      "port1": 4,
+      "port2": 2
+    },
+    {
+      "device1": "s22",
+      "device2": "s23",
+      "port1": 4,
+      "port2": 3
+    },
+    {
+      "device1": "s23",
+      "device2": "s24",
+      "port1": 4,
+      "port2": 3
+    },
+    {
+      "device1": "s24",
+      "device2": "s25",
+      "port1": 4,
+      "port2": 3
+    },
+    {
+      "device1": "s25",
+      "device2": "s26",
+      "port1": 4,
+      "port2": 3
+    }
+  ]
+}

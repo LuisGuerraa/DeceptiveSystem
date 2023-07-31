@@ -1,0 +1,83 @@
+{
+    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+        {
+            "type": "PointToPointIntent",
+            "appId": "org.onosproject.restconf",
+            "priority": 55,
+            "ingressPoint":
+                {
+                    "device": "of:0000000000000021",
+                    "port": "1"
+                },
+            "egressPoint":
+                {
+                    "device": "of:0000000000000020",
+                    "port": "1"
+                },
+            "selector": {
+                "criteria": [
+                    {
+                        "type": "ETH_TYPE",
+                        "ethType": "0x800"
+                    },
+                    {
+                        "type": "IPV4_SRC",
+                        "ip": "h1"
+                    },
+                    {
+                        "type": "IPV4_DST",
+                        "ip": "h2"
+                    },
+                    {
+                        "type": "IP_PROTO",
+                        "protocol": 6
+                    },
+                    {
+                        "type": "TCP_DST",
+                        "tcpPort": 3306
+                    }
+                ]   
+            }
+        },
+
+        {
+            "type": "PointToPointIntent",
+            "appId": "org.onosproject.restconf",
+            "priority": 55,
+            "ingressPoint":
+                {
+                    "device": "of:0000000000000020",
+                    "port": "1"
+                },
+            "egressPoint":
+                {
+                    "device": "of:0000000000000021",
+                    "port": "1"
+                },
+            "selector": {
+                "criteria": [
+                    {
+                        "type": "ETH_TYPE",
+                        "ethType": "0x800"
+                    },
+                    {
+                        "type": "IPV4_SRC",
+                        "ip": "h2"
+                    },
+                    {
+                        "type": "IPV4_DST",
+                        "ip": "h1"
+                    },
+                    {
+                        "type": "IP_PROTO",
+                        "protocol": 6
+                    },
+                    {
+                        "type": "TCP_SRC",
+                        "tcpPort": 3306
+                    }
+                ]
+            }
+        }
+    ]
+}

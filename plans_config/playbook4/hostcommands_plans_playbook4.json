@@ -1,0 +1,25 @@
+{
+    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+        {
+            "cmd" : "/entrypoint.sh mysqld &" ,
+            "host" : "h1"
+        },
+        {
+            "cmd" : "/usr/local/bin/docker-entrypoint.sh apache2-foreground &",
+            "host" : "h2"
+        },
+        {
+            "cmd" : "ifconfig h3-eth1 ip",
+            "host" : "h3"
+        },
+        {
+            "cmd" : "python3 /usr/src/app/app.py &",
+            "host" : "h3"
+        },
+        {
+            "cmd" : "service nginx start& ",
+            "host" : "h4"
+        }
+        
+    ]
+  }

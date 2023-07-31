@@ -1,0 +1,47 @@
+{
+    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|": [
+      {
+        "device1": "h10",
+        "device2": "s1",
+        "port1": 1,
+        "port2": 1
+      },
+      {
+        "device1": "h11",
+        "device2": "s2",
+        "port1": 1,
+        "port2": 1
+      },
+      {
+        "device1": "s1",
+        "device2": "s2",
+        "port1": 2,
+        "port2": 2
+      },
+      {
+        "device1": "s1",
+        "device2": "s3",
+        "port1": 3,
+        "port2": 2
+      },
+      {
+        "device1": "s2",
+        "device2": "s3",
+        "port1": 3,
+        "port2": 3
+      },
+      {
+        "device1": "s2",
+        "device2": "s4",
+        "port1": 4,
+        "port2": 2
+      },
+      {
+        "device1": "s3",
+        "device2": "s4",
+        "port1": 4,
+        "port2": 3
+      }
+    ]
+  }
+  

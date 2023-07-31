@@ -1,0 +1,9 @@
+{
+    "Infrastructure_Manipulation|Audit_Log_Manipulation||": [
+        {
+            "name": "c1", "ip": "172.17.0.7", "port": 6633
+        }
+    ],
+    
+    "ubuntu_exploitation|file_system_exploit|": []
+}

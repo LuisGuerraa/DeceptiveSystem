@@ -1,0 +1,12 @@
+{
+    "ubuntu_exploitation|||": [
+      {
+        "isDocker": 1,
+        "name": "h5",
+        "ip": "",
+        "mac": "",
+        "dimage": "ubuntu:trusty"
+      }
+    ]
+
+}

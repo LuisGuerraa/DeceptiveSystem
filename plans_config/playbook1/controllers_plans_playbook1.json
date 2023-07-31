@@ -1,0 +1,9 @@
+{
+    "ubuntu_exploitation|||": [
+        {
+            "name": "c0", "ip": "172.17.0.5", "port": 6633
+        }
+    ],
+    
+    "api_scan||": []
+}

@@ -1,0 +1,17 @@
+{
+    "ubuntu_exploitation|||": [
+      {
+        "device1": "h5",
+        "device2": "s15",
+        "port1": 1,
+        "port2": 1
+      },
+      {
+        "device1": "s15",
+        "device2": "s16",
+        "port1": 2,
+        "port2": 2
+      }
+    ]
+}
+  

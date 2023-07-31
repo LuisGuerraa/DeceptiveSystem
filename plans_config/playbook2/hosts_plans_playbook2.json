@@ -1,0 +1,11 @@
+{
+    "Infrastructure_Manipulation|Audit_Log_Manipulation||": [
+      {
+        "isDocker": 1,
+        "name": "h50",
+        "ip": "",
+        "mac": "",
+        "dimage": "ubuntu:trusty"
+      }
+    ]
+  }

@@ -1,0 +1,9 @@
+{
+    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|": [
+        {
+            "name": "c0", "ip": "172.17.0.6", "port": 6633
+        }
+    ],
+    
+    "sqli|login_attempt|APT41": []
+}

@@ -1,0 +1,9 @@
+{
+    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+        {
+            "name": "c0", "ip": "172.17.0.5", "port": 6633
+        }
+    ],
+    
+    "sqli|login_attempt|APT41": []
+}

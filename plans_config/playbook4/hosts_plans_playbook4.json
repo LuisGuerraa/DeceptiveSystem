@@ -1,0 +1,74 @@
+{
+    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+      {
+        "isDocker": 1,
+        "name": "h1",
+        "ip": "",
+        "mac": "",
+        "dimage": "mymysql:latest",
+        "environment": {
+          "MYSQL_DATABASE": "exampledb",
+          "MYSQL_USER": "exampleuser",
+          "MYSQL_PASSWORD": "examplepass",
+          "MYSQL_RANDOM_ROOT_PASSWORD": "1"
+        }
+      },
+      {
+        "isDocker": 1,
+        "name": "h2",
+        "ip": "",
+        "mac": "",
+        "dimage": "mywordpress:latest",
+        "ports": [8080],
+        "port_bindings": {
+          "80": 8080
+        },
+        "environment": {
+          "WORDPRESS_DB_HOST": "192.168.0.2",
+          "WORDPRESS_DB_USER": "exampleuser",
+          "WORDPRESS_DB_PASSWORD": "examplepass",
+          "WORDPRESS_DB_NAME": "exampledb"
+        }
+      },
+      {
+        "isDocker": 1,
+        "name": "h3",
+        "ip": "",
+        "mac": "",
+        "dimage": "lab-api:latest",
+        "ports": [8888],
+        "port_bindings": {
+          "5000": 8888
+        }
+      },
+      {
+        "isDocker": 1,
+        "name": "h4",
+        "ip": "",
+        "mac": "",
+        "dimage": "lab-web:latest",
+        "ports": [8081],
+        "port_bindings": {
+          "80": 8081
+        }
+      }
+    ],
+    "cpanel||": [
+      {
+        "name": "h2",
+        "ip": "",
+        "mac": "",
+        "dimage": "mywordpress:latest",
+        "ports": [8080],
+        "port_bindings": {
+          "80": 8080
+        },
+        "environment": {
+          "WORDPRESS_DB_HOST": "192.168.200.251",
+          "WORDPRESS_DB_USER": "exampleuser",
+          "WORDPRESS_DB_PASSWORD": "examplepass",
+          "WORDPRESS_DB_NAME": "exampledb"
+        }
+      }
+    ]
+  }
