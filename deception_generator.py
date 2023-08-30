@@ -160,7 +160,7 @@ def handle_connection_from_intelligence_perform_postmortem(conn, addr):
    
     container_id_or_name = params[0]
     output_file = params[1]
-    print ("Preserving host state and storing of post-mortem forensics...")
+    print ("Preserving host state and storing filesystem for post-mortem forensics...")
        
     print ("Exporting container file to {}...", output_file)
     export_container_filesystem(container_id_or_name, output_file)
