@@ -150,8 +150,9 @@ def define_host_cmds(net_hosts,attack_type,attacker_ip,attack_details,threat_act
                                 if obj.get("name") == command["host"]:
                                     host_ip=obj.get("ip")
                         command["cmd"] = command["cmd"].replace("ip", host_ip)
+                        
                     host[list(host.keys())[0]].cmd(command["cmd"])
-                   
+                    
     return specific_attacks_commands    
     
 def define_network_traffic_policies(controllers,attack_type,attacker_ip,attack_details,threat_actor,cve,playbook): # PASSAR sdn_controllers EM VEZ DE sdn_network_controllers
@@ -241,7 +242,7 @@ hosts = define_hosts(type_of_attack,attacker_ip,attack_details,threat_actor,cve,
 
 net_hosts = []
 
-for host in hosts: # Check other possibilities of properties 
+for host in hosts: # Check possibilities of properties 
 
     if(host['isDocker'] == 1):  
         if all(key in host for key in ('ports', 'port_bindings', 'environment')):
@@ -280,7 +281,7 @@ info('*** Starting Deception Grid ***\n')
 
 net.start()
 
-net.pingAll() # make hosts visible to SDN controller due to reactive forwarding (automatic discovery)
+net.pingAll() # make hosts visible to SDN controller due to reactive forwarding (automatic discovery) #uncomment to remove functionality
 
 info('*** Injecting Commands in Hosts ***\n')
 

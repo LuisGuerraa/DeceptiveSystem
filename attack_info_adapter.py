@@ -44,6 +44,7 @@ def send_to_deception_generator():
 
 
 def send_information():
+    print("Sending parsed cyber-attack information to Deception Generator and Intelligence simultaneously ...")
     # create separate processes for each socket connection
     p1 = multiprocessing.Process(target=send_to_intelligence)
     p2 = multiprocessing.Process(target=send_to_deception_generator)
@@ -73,8 +74,9 @@ def adapt_information(data):
 
     params = data.split()
     adapted_params = []
-
+    
     json_attack_type = load_json(f'./attack_adapters/type_of_attack.json') # get system acknowledge type of attack
+    
     adapted_params.append(json_attack_type.get(params[0]))
 
     adapted_params.append(params[1]) # attacker IP
@@ -85,8 +87,16 @@ def adapt_information(data):
 
         if len(params) > 3:
             adapted_params.append(params[3]) # APT group
+            
             if len(params) > 4:
                 adapted_params.append(params[4]) # CVE
+    
+    print("Parsed cyber-attack information:")
+    print(f'Attack Type: {adapted_params[0]}')
+    print(f'IP Address: {adapted_params[1]}') 
+    print(f'Attack Details: {adapted_params[2]}')
+    print(f'Threat Group: {adapted_params[3]}')
+    print(f'CVE: {adapted_params[4]}')
 
     return adapted_params
 

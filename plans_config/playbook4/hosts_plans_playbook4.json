@@ -1,5 +1,5 @@
 {
-    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+    "CAPEC_SQL_Injection|CAPEC_Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
       {
         "isDocker": 1,
         "name": "h1",
@@ -24,7 +24,7 @@
           "80": 8080
         },
         "environment": {
-          "WORDPRESS_DB_HOST": "192.168.0.2",
+          "WORDPRESS_DB_HOST": "127.0.0.1",
           "WORDPRESS_DB_USER": "exampleuser",
           "WORDPRESS_DB_PASSWORD": "examplepass",
           "WORDPRESS_DB_NAME": "exampledb"
@@ -49,7 +49,8 @@
         "dimage": "lab-web:latest",
         "ports": [8081],
         "port_bindings": {
-          "80": 8081
+          "80": 8081,
+          "8336":8336
         }
       }
     ],

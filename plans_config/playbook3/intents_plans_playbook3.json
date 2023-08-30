@@ -1,5 +1,5 @@
 {
-    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|": [
+    "MITRE_Data_Encoding|MITRE_BADNEWS|Patchwork|": [
         {
             "type": "PointToPointIntent",
             "appId": "org.onosproject.restconf",

@@ -26,6 +26,22 @@ def deception_build(full_data, type_of_attack,attacker_ip, attack_details, threa
     
     # static deception planner
     # the goal is to launch the other script and terminate this to enable to run again and receive other plans
+
+    
+    # "None" verification is when attack comes from attack_info_adapter and bool for research deployment through intelligence api deployment
+
+   # if (type_of_attack is not None or bool(type_of_attack)) and (attacker_ip is not None or bool(attacker_ip)) and (not attack_details or not bool(attack_details)) and (not threat_actor or not bool(threat_actor)):
+   # 	subprocess.Popen(['python3', 'playbook1.py',type_of_attack,attacker_ip])
+   #     sys.exit()
+    
+   # else :
+   #     if (type_of_attack is not None or bool(type_of_attack)) and (attacker_ip is not None or bool(attacker_ip)) and (attack_details is not None or bool(attack_details)) and (not threat_actor or not bool(threat_actor)):
+   # 	    subprocess.Popen(['python3', 'playbook2.py',type_of_attack,attacker_ip, attack_details])
+   # 	    sys.exit()
+   #     else:
+   #         if (type_of_attack is not None or bool(type_of_attack)) and (attacker_ip is not None or bool(attacker_ip)) and (attack_details is not None or bool(attack_details)) and (threat_actor is not None or bool(threat_actor)):
+   #             subprocess.Popen(['python3', 'playbook3.py',type_of_attack,attacker_ip, attack_details, threat_actor])
+   #             sys.exit()
     
     subprocess.Popen(['python3', 'static_deception_planner.py',type_of_attack,attacker_ip, attack_details, threat_actor, cve])
 

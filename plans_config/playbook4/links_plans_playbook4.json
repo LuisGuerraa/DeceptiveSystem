@@ -1,5 +1,5 @@
 {
-  "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+  "CAPEC_SQL_Injection|CAPEC_Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
     {
       "device1": "h1",
       "device2": "s20",

@@ -12,7 +12,7 @@ count=5
 
 # ataques para playbook 4 (5 parametros)
 
-type_of_attack4='sqli' 
+type_of_attack4='sqli'
 attacker_ip4=''
 attack_details4= 'cleSQL' 
 threat_actor4= 'APT42'
@@ -21,9 +21,9 @@ cve4='CVE-2022-30927'
 
 # ataques para playbook 3 (4 parametros)
 
-type_of_attack3='sqli'
+type_of_attack3='encoding'
 attacker_ip3=''
-attack_details3= 'cleSQL' 
+attack_details3= 'badnews' 
 threat_actor3= 'APT42'
 cve3=''
 
@@ -38,10 +38,11 @@ cve2=''
 # ataques para playbook 1 (2 parametros)
 
 type_of_attack='ubuntu_exploitation'
-attacker_ip=''
+attacker_ip=attacker_ip
 attack_details=''
 threat_actor= ''
 cve=''
+
 
 
 def start_socket_server(): # socket for receiving attack info from detection
@@ -54,7 +55,6 @@ def start_socket_server(): # socket for receiving attack info from detection
           conn, addr = s.accept()
           print('Socket connection established from:', addr)
           threading.Thread(target=handle_socket, args=(conn,)).start()
-
 
 def handle_socket(sock):
     while True:
@@ -78,9 +78,9 @@ def handle_socket(sock):
         global count
         count=count-1
         
+        print('Classifying cyber-attack ...')
         send_to_attack_info_adapter()
     sock.close()
-
 
 def send_to_attack_info_adapter():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -88,6 +88,8 @@ def send_to_attack_info_adapter():
         
         if count == 4:
            params = '{} {} {} {} {}'.format(type_of_attack4,attacker_ip4,attack_details4,threat_actor4,cve4)
+           print('Attack classified with the following proprietary typification:')
+           print(f'{type_of_attack4} with IP: {attacker_ip4}, details: {attack_details4} by {threat_actor4} with CVE: {cve4}')
         elif count == 3:
            params = '{} {} {} {} {}'.format(type_of_attack3,attacker_ip3,attack_details3,threat_actor3,cve3)
        

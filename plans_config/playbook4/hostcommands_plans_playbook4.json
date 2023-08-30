@@ -1,7 +1,11 @@
 {
-    "SQL_Injection|Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
+    "CAPEC_SQL_Injection|CAPEC_Command_Line_Execution_through_SQL_Injection|APT42|CVE-2022-30927": [
         {
             "cmd" : "/entrypoint.sh mysqld &" ,
+            "host" : "h1"
+        },
+        {
+            "cmd" : "python3 send_logs_to_asset_monitoring.py &" ,
             "host" : "h1"
         },
         {
@@ -19,7 +23,10 @@
         {
             "cmd" : "service nginx start& ",
             "host" : "h4"
+        },
+        {
+            "cmd" : "python3 send_logs_to_asset_monitoring.py &" ,
+            "host" : "h4"
         }
-        
     ]
-  }
+}

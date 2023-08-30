@@ -1,5 +1,7 @@
 {
     
-    "cleSQL":"Command_Line_Execution_through_SQL_Injection",
-    "HTTPDoS":"HTTP_DoS"
+    "cleSQL":"CAPEC_Command_Line_Execution_through_SQL_Injection",
+    "HTTPDoS":"CAPEC_HTTP_DoS",
+    "empireTool":"MITRE_Empire",
+    "badnews": "MITRE_BADNEWS"
 }
