@@ -32,7 +32,7 @@ PORT_LISTEN_ATTACK_INFO_ADAPTER = 5012
 
 PORT_LISTEN_LOGS = 514
 
-HOST_SIEM = '10.0.2.11'
+HOST_SIEM = '10.0.2.14'
 SIEM_PORT = 514
 
 @app.route('/api/attacks', methods=['GET'])
@@ -220,7 +220,7 @@ def send_siem(data):
             
             s.sendto(data, (HOST_SIEM, SIEM_PORT))
 
-            print("Log sent to SIEM!")
+            #print("Log sent to SIEM!")
         except ConnectionRefusedError:
             print("Connection refused. Make sure the receiver script is running.")
 
@@ -235,7 +235,7 @@ def logs_receptor():
         while True:
             data, address = server_socket.recvfrom(4096)
             send_information_siem(data)
-            print(f"Received log from {address[0]}:\n{data.decode()}")
+            #print(f"Received log from {address[0]}:\n{data.decode()}")
     except KeyboardInterrupt:
         print("Keyboard interrupt received. Exiting...")
     finally:

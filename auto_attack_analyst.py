@@ -37,11 +37,11 @@ cve2=''
 
 # ataques para playbook 1 (2 parametros)
 
-type_of_attack1='ubuntu_exploitation'
-attacker_ip1=attacker_ip
-attack_details1=''
-threat_actor1= ''
-cve1=''
+type_of_attack='ubuntu_exploitation'
+attacker_ip=attacker_ip
+attack_details=''
+threat_actor= ''
+cve=''
 
 
 
@@ -92,16 +92,6 @@ def send_to_attack_info_adapter():
            print(f'{type_of_attack4} with IP: {attacker_ip4}, details: {attack_details4} by {threat_actor4} with CVE: {cve4}')
         elif count == 3:
            params = '{} {} {} {} {}'.format(type_of_attack3,attacker_ip3,attack_details3,threat_actor3,cve3)
-           print('Attack classified with the following proprietary typification:')
-           print(f'{type_of_attack3} with IP: {attacker_ip3}, details: {attack_details3} by {threat_actor3} with CVE: {cve3}')
-        elif count == 2:
-           params = '{} {} {} {} {}'.format(type_of_attack2,attacker_ip2,attack_details2,threat_actor2,cve2)
-           print('Attack classified with the following proprietary typification:')
-           print(f'{type_of_attack2} with IP: {attacker_ip2}, details: {attack_details2} by {threat_actor4} with CVE: {cve2}')
-        elif count == 1:
-           params = '{} {} {} {} {}'.format(type_of_attack1,attacker_ip1,attack_details1,threat_actor1,cve1)
-           print('Attack classified with the following proprietary typification:')
-           print(f'{type_of_attack1} with IP: {attacker_ip1}, details: {attack_details1} by {threat_actor1} with CVE: {cve1}')
        
         s.sendall(params.encode())
         data = s.recv(1024)

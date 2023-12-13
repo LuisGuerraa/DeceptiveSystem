@@ -1,0 +1,42 @@
+-> Deploy grid manually (Research Deployment)  //antes tinha "plan":"planx.py" mas para tirar redundancia e colocar abstraçao tirou se
+
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"attack_type":"CAPEC_SQL_Injection","IP":"10.0.2.11/24","attack_details":"CAPEC_Command_Line_Execution_through_SQL_Injection","threat_actor":"APT42", "cve": "CVE-2022-30927"}' http://127.0.0.1:5000/api/topology
+
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"attack_type":"MITRE_Data_Encoding","IP":"192.168.200.150/24","attack_details":"MITRE_BADNEWS","threat_actor":"Patchwork", "cve":""}' http://127.0.0.1:5000/api/topology
+
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"attack_type":"ubuntu_exploitation","IP":"192.168.200.150/24","attack_details":"kernel_exploit","threat_actor":"", "cve":""}' http://127.0.0.1:5000/api/topology
+
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"attack_type":"ubuntu_exploitation","IP":"192.168.200.150/24","attack_details":"","threat_actor":"", "cve":""}' http://127.0.0.1:5000/api/topology
+
+-> Get deception grid topology
+   
+    curl -u onos:rocks http://127.0.0.1:5000/api/topology/172.17.0.5
+
+-> Add SDN host to deception grid
+                                                                                    //IP da rede mininet                                                                           //None
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"host_ip" : "10.0.2.200", "host_mac" : "97:BB:19:27:08:87", "switch_name" : "of:0000000000000018", "vlan" : "None", "port" : "2"}' http://127.0.0.1:5000/api/hosts/172.17.0.5
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"host_ip" : "127.0.0.7", "host_mac" : "97:BB:19:27:08:90", "switch_name" : "of:000000000000000b", "vlan" : "8", "port" : "3"}' http://127.0.0.1:5000/api/hosts/172.17.0.6
+
+new:
+    curl -X POST -u onos:rocks -H "Content-Type: application/json" -d '{"host_ip" : "10.0.2.200", "host_mac" : "97:BB:19:27:08:87", "switch_name" : "of:0000000000000018", "vlan" : "None", "port" : "2"}' http://127.0.0.1:5000/api/hosts/172.17.0.5
+
+
+-> Remove SDN host from deception grid
+   
+    curl -X DELETE -u onos:rocks -H "Content-Type: application/json" -d '{ "host_mac" : "97:BB:19:27:08:87", "vlan" : "10"}' http://127.0.0.1:5000/api/hosts/172.17.0.5
+    curl -X DELETE -u onos:rocks -H "Content-Type: application/json" -d '{ "host_mac" : "97:BB:19:27:08:90", "vlan" : "8"}' http://127.0.0.1:5000/api/hosts/172.17.0.6
+
+No postmortem:
+curl -X DELETE -u onos:rocks -H "Content-Type: application/json" -d '{"host_mac":"D6:08:D0:90:50:08", "vlan": "None", "container_id_or_name": "mn.h3"}' "http://127.0.0.1:5000/api/hosts/172.17.0.5"
+
+Postmortem:
+    curl -X DELETE -u onos:rocks -H "Content-Type: application/json" -d '{"host_mac":"E4:5F:9D:F5:61:36", "vlan": "None", "container_id_or_name": "mn.h4", "output_file": "./web_page_postmortem.tar"}' "http://127.0.0.1:5000/api/hosts/172.17.0.5?postmortem=true"
+
+
+-> Get registered deployments
+   
+    curl -u onos:rocks http://127.0.0.1:5000/api/deployments
+
+-> Get registered attacks
+   
+    curl -u onos:rocks http://127.0.0.1:5000//api/attacks

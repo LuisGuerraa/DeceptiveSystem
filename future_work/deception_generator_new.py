@@ -29,9 +29,6 @@ deception_grids_counter = Value('i', 0)
 
 deception_grids = []
 
-
-
-
 playbook_mapping = { # by having this object, this can be stored anywhere and imported by this script (e.g., json in web server, other script, etc.)
     (True, True, False, False, False): "1",
     (True, True, True, False, False): "2",

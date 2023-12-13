@@ -1,9 +1,3 @@
-docker run --name containernet -it --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
 
 docker run --name containernet -it --rm --privileged --pid='host' -p 5010:5010 -p 5014:5014 -p 5045:5045 -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
 
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' containernet
-
-new:
-
-docker run --name containernet -it --rm --privileged --pid='host' -p 5010:5010 -p 5014:5014 -p 5045:5045 -p 5046:5046 -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
