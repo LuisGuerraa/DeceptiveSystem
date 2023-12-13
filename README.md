@@ -31,3 +31,8 @@ The validation and lab environment is summed below:
 <div style="text-align:center; margin-bottom: 20px;">
     <img src="./media/Extended Arch.svg" alt="ext_arch" style="max-width: 50%; border: 3px solid grey; padding: 0px;">
 </div>
+
+
+## Demonstration
+
+[![Alt text for your video](https://img.youtube.com/vi/D_eMpJl7i_E/0.jpg)](http://www.youtube.com/watch?v=D_eMpJl7i_E)
