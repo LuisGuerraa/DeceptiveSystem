@@ -11,15 +11,6 @@ In order to try to peak cyber deceptive capabilities for an organization, a syst
 
 This implementation aims to validade the following architectural proposal:
 
-
-<div style="text-align:center; margin-bottom: 20px;">
-    <img src="./media/Implementation.svg" alt="impl" style="max-width: 100%; border: 3px solid grey; padding: 0px;">
-</div>
-
-
-
-The validation and lab environment is summed below:
-
 - Base Architecture
 
 <div style="text-align:center; margin-bottom: 20px;">
@@ -30,6 +21,13 @@ The validation and lab environment is summed below:
 
 <div style="text-align:center; margin-bottom: 20px;">
     <img src="./media/Extended Arch.svg" alt="ext_arch" style="max-width: 50%; border: 3px solid grey; padding: 0px;">
+</div>
+
+
+The validation and lab environment is summed below:
+
+<div style="text-align:center; margin-bottom: 20px;">
+    <img src="./media/Implementation.svg" alt="impl" style="max-width: 100%; border: 3px solid grey; padding: 0px;">
 </div>
 
 
